@@ -6,4 +6,5 @@ tasks:
     code: |
       sudo apk add docker-cli
       sudo docker run hello-world
-      sudo docker build {{ CWD }} 
+      export cwd=$(pwd)
+      sudo -E docker build $cwd/source
