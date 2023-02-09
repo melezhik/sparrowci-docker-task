@@ -11,5 +11,5 @@ tasks:
   -
     name: install-docker-cli
     language: Bash
-    code:
+    code: |
       apk add docker-cli
