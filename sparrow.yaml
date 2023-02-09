@@ -13,9 +13,10 @@ tasks:
       set -e
       set -x
       id
-      #export user=$(whoami)
-      #sudo --preserve-env=user usermod -a -G docker worker
-      newgrp docker
+      export user=$(whoami)
+      sudo --preserve-env=user usermod -a -G docker worker
+      #newgrp docker
+      id
       docker run hello-world
   -
     name: install-docker-cli
