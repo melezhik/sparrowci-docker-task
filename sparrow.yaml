@@ -13,7 +13,8 @@ tasks:
       echo OK1
       sudo addgroup docker
       echo OK2
-      sudo adduser -G docker worker
+      #sudo adduser -G docker worker
+      sudo sed -i '/^docker:/s/\(.*\)/\1,worker/;s/:,/:/' /etc/group
       echo OK3
       docker run hello-world
   -
