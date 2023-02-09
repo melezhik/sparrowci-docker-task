@@ -6,3 +6,4 @@ tasks:
     code: |
       sudo apk add docker-cli
       sudo docker run hello-world
+      sudo docker build {{ CWD }} 
