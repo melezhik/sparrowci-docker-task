@@ -13,7 +13,7 @@ tasks:
       echo OK1
       sudo addgroup docker
       echo OK2
-      sudo addgroup -G docker worker
+      sudo adduser -G docker worker
       echo OK3
       docker run hello-world
   -
