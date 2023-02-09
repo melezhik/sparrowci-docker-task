@@ -7,6 +7,9 @@ tasks:
         name: install-docker-cli
     language: Bash
     code: |
+      set -e
+      set -x
+      sudo addgroup $USER docker
       docker run hello-world
   -
     name: install-docker-cli
