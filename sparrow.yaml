@@ -5,6 +5,5 @@ tasks:
     default: true
     code: |
       sudo apk add docker-cli
-      sudo docker run hello-world
       cd source/
       docker build .
