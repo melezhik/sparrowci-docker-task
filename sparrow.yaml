@@ -15,6 +15,7 @@ tasks:
       echo OK2
       #sudo adduser -G docker worker
       sudo sed -i '/^docker:/s/\(.*\)/\1,worker/;s/:,/:/' /etc/group
+      id
       echo OK3
       docker run hello-world
   -
