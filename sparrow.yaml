@@ -17,15 +17,15 @@ tasks:
       sudo sed -i '/^docker:/s/\(.*\)/\1,worker/;s/:,/:/' /etc/group
       echo OK3
       sudo grep docker /etc/group
-      echo OK4
-      sudo newgrp docker
-      echo OK5
-      id
+      #echo OK4
+      #sudo newgrp docker
+      #echo OK5
+      #id
       echo OK6
-      docker run hello-world
+      bash -c 'docker run hello-world'
   -
     name: install-docker-cli
     language: Bash
     code: |
       sudo apk add docker-cli
-      sudo apk add util-linux-login --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
+      # sudo apk add util-linux-login --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
