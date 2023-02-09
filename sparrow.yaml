@@ -3,23 +3,19 @@ image:
   
 tasks:
   -
-    name: run-docker
+    name: install-docker-cli
+    plugin: docker-engine
     default: true
-    depends:
+    config:
+      cli_only: true
+    followup:
       -
-        name: install-docker-cli
+        name: run-docker    
+  -
+    name: run-docker
     language: Bash
     code: |
       set -e
       set -x
       id
-      export user=$(whoami)
-      sudo --preserve-env=user usermod -a -G docker worker
-      #newgrp docker
-      id
       docker run hello-world
-  -
-    name: install-docker-cli
-    plugin: docker-engine
-    config:
-      cli_only: true
