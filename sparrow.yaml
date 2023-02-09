@@ -1,6 +1,6 @@
 image:
-  -
-    melezhik/sparrow:debian
+  - melezhik/sparrow:debian
+  
 tasks:
   -
     name: run-docker
