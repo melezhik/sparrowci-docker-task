@@ -1,0 +1,15 @@
+tasks:
+  -
+    name: run-docker
+    default: true
+    depends:
+      -
+        name: install-docker-cli
+    language: Bash
+    code: |
+      docker run hello-world
+  -
+    name: install-docker-cli
+    language: Bash
+    code:
+      apk add docker-cli
