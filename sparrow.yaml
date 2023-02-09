@@ -18,4 +18,4 @@ tasks:
       set -e
       set -x
       id
-      suudo docker run hello-world
+      sudo docker run hello-world
