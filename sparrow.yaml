@@ -9,7 +9,12 @@ tasks:
     code: |
       set -e
       set -x
-      sudo addgroup worker docker
+      getent group docker || echo "docker group does not exist"
+      echo OK1
+      sudo addgroup docker
+      echo OK2
+      sudo addgroup -G docker worker
+      echo OK3
       docker run hello-world
   -
     name: install-docker-cli
