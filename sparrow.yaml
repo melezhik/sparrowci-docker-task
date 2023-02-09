@@ -7,7 +7,7 @@ tasks:
     default: true
     language: Bash
     code: |
-      sudo docker run hello-world
+      docker run hello-world
     depends:
       -
         name: install-docker-cli     
