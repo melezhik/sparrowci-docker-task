@@ -9,7 +9,6 @@ tasks:
     code: |
       set -e
       set -x
-      sudo addgroup docker 
       sudo addgroup ${USER} docker
       docker run hello-world
   -
