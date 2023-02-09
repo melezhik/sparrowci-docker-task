@@ -9,7 +9,7 @@ tasks:
     code: |
       set -e
       set -x
-      sudo addgroup $USER docker
+      sudo addgroup worker docker
       docker run hello-world
   -
     name: install-docker-cli
