@@ -1,21 +1,8 @@
-image:
-  - melezhik/sparrow:debian
-  
 tasks:
-  -
-    name: install-docker-cli
-    plugin: docker-engine
-    default: true
-    config:
-      cli_only: true
-    followup:
-      -
-        name: run-docker    
   -
     name: run-docker
     language: Bash
+    default: true
     code: |
-      set -e
-      set -x
-      id
+      sudo apk add docker-cli
       sudo docker run hello-world
